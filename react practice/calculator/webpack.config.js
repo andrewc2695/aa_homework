@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry: './app.jsx',
@@ -22,5 +23,11 @@ module.exports = {
     devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx', '*']
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            "process.env": "{}",
+            global: {}
+        })
+    ]
 };
