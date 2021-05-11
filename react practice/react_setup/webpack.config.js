@@ -1,7 +1,7 @@
 module.exports = {
     entry: './setup.jsx',
     output: {
-        filename: '.bundle.js'
+        filename: './bundle.js'
     },
     module: {
         rules: [
