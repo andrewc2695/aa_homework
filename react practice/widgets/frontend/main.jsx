@@ -16,6 +16,18 @@ const Main = () => {
                     color: purple;
                 }
             `}>Clock</Link>
+            <Link to="/weather" css={
+                css`
+                color: black;
+                font-size: 50px;
+                text-decoration: none;
+                &:hover {
+                    color: purple
+                }
+                `
+            }>
+                Weather
+            </Link>
         </div>
     )
 }

@@ -1786,6 +1786,71 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ }),
 
+/***/ "./frontend/clickMe.jsx":
+/*!******************************!*\
+  !*** ./frontend/clickMe.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ClickMe = /*#__PURE__*/function (_React$Component) {
+  _inherits(ClickMe, _React$Component);
+
+  var _super = _createSuper(ClickMe);
+
+  function ClickMe(props) {
+    var _this;
+
+    _classCallCheck(this, ClickMe);
+
+    _this = _super.call(this, props);
+    debugger;
+    return _this;
+  }
+
+  _createClass(ClickMe, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "click me!");
+    }
+  }]);
+
+  return ClickMe;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ClickMe);
+
+/***/ }),
+
 /***/ "./frontend/clock.jsx":
 /*!****************************!*\
   !*** ./frontend/clock.jsx ***!
@@ -1798,7 +1863,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
+/* harmony import */ var _clickMe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clickMe */ "./frontend/clickMe.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var _templateObject;
@@ -1829,6 +1896,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var Clock = /*#__PURE__*/function (_React$Component) {
   _inherits(Clock, _React$Component);
 
@@ -1844,7 +1913,6 @@ var Clock = /*#__PURE__*/function (_React$Component) {
       time: new Date()
     };
     _this.timeInterval;
-    debugger;
     return _this;
   }
 
@@ -1853,24 +1921,28 @@ var Clock = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log("hi");
       this.timeInterval = setInterval(function () {
         _this2.setState({
           time: new Date()
         });
       }, 1000);
+      debugger;
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       clearInterval(this.timeInterval);
+      debugger;
     }
   }, {
     key: "render",
     value: function render() {
-      return (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        css: (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n                width: 30%;\n                height: 100px;\n                background-color: hotpink;\n                font-size: 24px;\n                border-radius: 4px;\n                margin-left: auto;\n                margin-right: auto;\n                display: flex;\n                justify-content: center;\n                align-items: center;\n                &:hover {\n                    color: lightgreen;\n                }"])))
-      }, (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", null, "Current Time:", this.state.time.getHours(), ":", this.state.time.getMinutes(), ":", this.state.time.getSeconds()), this.props.user);
+      return (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", null, (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        css: (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n                width: 30%;\n                height: 100px;\n                background-color: hotpink;\n                font-size: 24px;\n                border-radius: 4px;\n                margin-left: auto;\n                margin-right: auto;\n                display: flex;\n                justify-content: center;\n                align-items: center;\n                &:hover {\n                    color: lightgreen;\n                }"])))
+      }, (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", null, "Current Time:", this.state.time.getHours(), ":", this.state.time.getMinutes(), ":", this.state.time.getSeconds())), (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", null, "Hi ", this.props.user, " lets click things!", (0,_emotion_react__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+        to: "/click",
+        clickcount: "hi"
+      }, "Click to click")));
     }
   }]);
 
@@ -1895,7 +1967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
-var _templateObject;
+var _templateObject, _templateObject2;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -1909,10 +1981,103 @@ var Main = function Main() {
   return (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", null, (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/clock",
     css: (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n                color: black;\n                font-size: 50px;\n                text-decoration: none;\n                &:hover {\n                    color: purple;\n                }\n            "])))
-  }, "Clock"));
+  }, "Clock"), (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/weather",
+    css: (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n                color: black;\n                font-size: 50px;\n                text-decoration: none;\n                &:hover {\n                    color: purple\n                }\n                "])))
+  }, "Weather"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);
+
+/***/ }),
+
+/***/ "./frontend/weather.jsx":
+/*!******************************!*\
+  !*** ./frontend/weather.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Weather = /*#__PURE__*/function (_React$Component) {
+  _inherits(Weather, _React$Component);
+
+  var _super = _createSuper(Weather);
+
+  function Weather(props) {
+    var _this;
+
+    _classCallCheck(this, Weather);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      weather: ""
+    };
+    return _this;
+  }
+
+  _createClass(Weather, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var url = "http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&appid=5f5690f4ebd85909126de5e072f5362a";
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function () {
+        //ready state of DONE means this is complete
+        if (xmlhttp.status === 200 && xmlhttp.readyState === XMLHttpRequest.DONE) {
+          var data = JSON.parse(xmlhttp.responseText);
+
+          _this2.setState({
+            weather: data
+          });
+        }
+      };
+
+      xmlhttp.open('GET', url, true);
+      xmlhttp.send();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.state.weather === "") return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "The Temperature in San Francisco is: ", Math.floor((this.state.weather.main.temp - 273.15) * (9 / 5) + 32), " Degrees");
+    }
+  }]);
+
+  return Weather;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Weather);
 
 /***/ }),
 
@@ -1928,10 +2093,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _frontend_clock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./frontend/clock */ "./frontend/clock.jsx");
-/* harmony import */ var _frontend_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frontend/main */ "./frontend/main.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _frontend_clickMe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./frontend/clickMe */ "./frontend/clickMe.jsx");
+/* harmony import */ var _frontend_clock__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frontend/clock */ "./frontend/clock.jsx");
+/* harmony import */ var _frontend_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./frontend/main */ "./frontend/main.jsx");
+/* harmony import */ var _frontend_weather__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./frontend/weather */ "./frontend/weather.jsx");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
@@ -1940,17 +2107,29 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
+
 function Root() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
-    path: "/main",
-    component: _frontend_main__WEBPACK_IMPORTED_MODULE_2__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
+  var variable = "hi";
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    exact: true,
+    path: "/",
+    component: _frontend_main__WEBPACK_IMPORTED_MODULE_3__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: "/clock",
     render: function render(props) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_frontend_clock__WEBPACK_IMPORTED_MODULE_1__.default, _extends({}, props, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_frontend_clock__WEBPACK_IMPORTED_MODULE_2__.default, _extends({}, props, {
         user: "squid"
       }));
     }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    path: "/click",
+    render: function render(props) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_frontend_clickMe__WEBPACK_IMPORTED_MODULE_1__.default, props);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    path: "/weather",
+    component: _frontend_weather__WEBPACK_IMPORTED_MODULE_4__.default
   })));
 }
 
